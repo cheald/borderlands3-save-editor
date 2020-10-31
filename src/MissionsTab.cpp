@@ -102,7 +102,7 @@ void MissionsTab::onObjectiveChanged(QListWidgetItem *item)
     int index = m_progressList->row(item);
     Q_ASSERT(index >= 0);
 
-    const QString missionId = m_missionsList->currentItem()->text();
+    const QString missionId = m_missionsList->currentItem()->data(Qt::UserRole).toString();
     m_savegame->setObjectiveCompleted(missionId, index, item->checkState() == Qt::Checked ? true : false);
 
     QTimer::singleShot(100, this, &MissionsTab::onMissionSelected);
