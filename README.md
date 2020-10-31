@@ -14,6 +14,13 @@ okay with using a command line, try
 https://github.com/apocalyptech/bl3-cli-saveedit instead. Almost everything
 here is just based on his discoveries anyways.
 
+## Building
+
+### Ubuntu
+
+    apt install cmake libprotobuf-dev qtbase5-dev
+    cmake .
+    make
 
 ## Windows builds
 
